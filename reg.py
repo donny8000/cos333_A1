@@ -33,8 +33,7 @@ def main():
 		help=titleHelperStr)
 
 	args = parser.parse_args()
-	for arg in args:
-		print (arg)
+	print(args)
 
 	# if (dept != ''):
 	# 	print('title: ' + dept)
