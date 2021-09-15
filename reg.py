@@ -33,16 +33,15 @@ def main():
 		help=titleHelperStr)
 
 	args = parser.parse_args()
-	print(args)
 
-	# if (dept != ''):
-	# 	print('title: ' + dept)
-	# if (num != ''):
-	# 	print('num: ' + num)
-	# if (area != ''):
-	# 	print('area' + area)
-	# if (title != ''):
-	# 	print('title' + title)
+	if (args.dept != ''):
+		print('title: ' + args.dept)
+	if (args.num != ''):
+		print('num: ' + args.num)
+	if (args.area != ''):
+		print('area' + args.area)
+	if (args.title != ''):
+		print('title' + args.title)
 
 
 #-----------------------------------------------------------------------
