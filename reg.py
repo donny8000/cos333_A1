@@ -32,14 +32,16 @@ def main():
 		dest='title', action='store', default='', 
 		help=titleHelperStr)
 
-	if (dept != ''):
-		print('title: ' + dept)
-	if (num != ''):
-		print('num: ' + num)
-	if (area != ''):
-		print('area' + area)
-	if (title != ''):
-		print('title' + title)
+	args = parser.parse_args()
+
+	# if (dept != ''):
+	# 	print('title: ' + dept)
+	# if (num != ''):
+	# 	print('num: ' + num)
+	# if (area != ''):
+	# 	print('area' + area)
+	# if (title != ''):
+	# 	print('title' + title)
 
 
 #-----------------------------------------------------------------------
