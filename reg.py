@@ -33,13 +33,13 @@ def main():
 		help=titleHelperStr)
 
 	if (dept != ''):
-		print 'title: ' + dept
+		print('title: ' + dept)
 	if (num != ''):
-		print 'num: ' + num
+		print('num: ' + num)
 	if (area != ''):
-		print 'area' + area
+		print('area' + area)
 	if (title != ''):
-		print 'title' + title
+		print('title' + title)
 
 
 #-----------------------------------------------------------------------
