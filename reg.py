@@ -32,13 +32,13 @@ def main():
 		dest='title', action='store', default='', 
 		help=titleHelperStr)
 
-	if (dept != '')
+	if (dept != ''):
 		print 'title: ' + dept
-	if (num != '')
+	if (num != ''):
 		print 'num: ' + num
-	if (area != '')
+	if (area != ''):
 		print 'area' + area
-	if (title != '')
+	if (title != ''):
 		print 'title' + title
 
 
