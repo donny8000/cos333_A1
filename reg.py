@@ -17,7 +17,7 @@ def main():
 		dest='dept', action='store', default='', 
 		help='show only those classes whose department contains dept')
 
-	parser.add_argument('-n num', type=str, nargs='?', 
+	parser.add_argument('-n num', type=str, nargs=1, 
 		dest='num', action='store', default='', 
 		help='show only those classes whose course number contains num')
 
