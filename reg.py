@@ -25,8 +25,8 @@ def main():
 		dest='area', action='store', default='', 
 		help='show only those classes whose distrib area contains area')
 
-	titleHelperStr = 'show only those classes whose course title ' + 
-		'contains title'
+	titleHelperStr = 'show only those classes whose course title '
+	titleHelperStr +='contains title'
 
 	parser.add_argument('-t', 'title', type=str, nargs='?', 
 		dest='title', action='store', default='', 
