@@ -37,7 +37,7 @@ def main():
 	if (args.dept != ''):
 		print('department: ' + args.dept)
 	if (args.num != ''):
-		print('num: ' + args.num)
+		print('num: ' + str(args.num))
 	if (args.area != ''):
 		print('area' + args.area)
 	if (args.title != ''):
