@@ -35,7 +35,7 @@ def main():
 	args = parser.parse_args()
 
 	if (args.dept != ''):
-		print('title: ' + args.dept)
+		print('department: ' + args.dept)
 	if (args.num != ''):
 		print('num: ' + args.num)
 	if (args.area != ''):
