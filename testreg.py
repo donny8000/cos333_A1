@@ -5,7 +5,7 @@
 # Authors: Donovan Pearce and Annette Lee
 #-----------------------------------------------------------------------
 
-from system import argv
+from sys import argv
 import os
 
 #-----------------------------------------------------------------------
