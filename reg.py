@@ -15,11 +15,11 @@ def main():
 	if (args.dept != ''):
 		print('department: ' + args.dept)
 	if (args.num != ''):
-		print('num: ' + args.num[0])
+		print('num: ' + args.num)
 	if (args.area != ''):
-		print('area: ' + args.area[0])
+		print('area: ' + args.area)
 	if (args.title != ''):
-		print('title: ' + args.title[0])
+		print('title: ' + args.title)
 
 
 #-----------------------------------------------------------------------
