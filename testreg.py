@@ -5,12 +5,12 @@
 # Authors: Donovan Pearce and Annette Lee
 #-----------------------------------------------------------------------
 
-import reg as reg
+import os
 
 #-----------------------------------------------------------------------
 
 def execute_command(args):
-	os.system('python ' + args)
+	os.system('python ' + argv[1] + ' ' + args)
 
 
 #-----------------------------------------------------------------------
