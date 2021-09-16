@@ -13,33 +13,34 @@ def main():
 
 	parser = argparse.ArgumentParser(description=
 		"Registrar application: show overviews of classes")
-	parser.add_argument('-d', type=str, nargs=1, metavar='dept',
+	parser.add_argument('-d', type=str, nargs='one', metavar='dept',
 		dest='dept', action='store', default='', 
 		help='show only those classes whose department contains dept')
 
-	parser.add_argument('-n', type=str, nargs=1, metavar='num',
+	parser.add_argument('-n', type=str, nargs='one', metavar='num',
 		dest='num', action='store', default='', 
 		help='show only those classes whose course number contains num')
 
-	parser.add_argument('-a', type=str, nargs=1, metavar='area',
+	parser.add_argument('-a', type=str, nargs='one', metavar='area',
 		dest='area', action='store', default='', 
 		help='show only those classes whose distrib area contains area')
 
 	titleHelperStr = 'show only those classes whose course title '
 	titleHelperStr +='contains title'
 
-	parser.add_argument('-t', type=str, nargs=1, metavar='title',
+	parser.add_argument('-t', type=str, nargs='one', metavar='title',
 		dest='title', action='store', default='', 
 		help=titleHelperStr)
-
-	args = parser.parse_args()
+	try:
+		args = parser.parse_args()
+	except 
 
 	if (args.dept != ''):
 		print('department: ' + args.dept[0])
 	if (args.num != ''):
 		print('num: ' + args.num[0])
 	if (args.area != ''):
-		print('area' + args.area[0])
+		print('area ' + args.area[0])
 	if (args.title != ''):
 		print('title' + args.title[0])
 
