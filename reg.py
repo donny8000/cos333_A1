@@ -13,22 +13,22 @@ def main():
 
 	parser = argparse.ArgumentParser(description=
 		"Registrar application: show overviews of classes")
-	parser.add_argument('-d', type=str, nargs='one', metavar='dept',
+	parser.add_argument('-d', type=str, nargs='?', metavar='dept',
 		dest='dept', action='store', default='', 
 		help='show only those classes whose department contains dept')
 
-	parser.add_argument('-n', type=str, nargs='one', metavar='num',
+	parser.add_argument('-n', type=str, nargs=1, metavar='num',
 		dest='num', action='store', default='', 
 		help='show only those classes whose course number contains num')
 
-	parser.add_argument('-a', type=str, nargs='one', metavar='area',
+	parser.add_argument('-a', type=str, nargs=1, metavar='area',
 		dest='area', action='store', default='', 
 		help='show only those classes whose distrib area contains area')
 
 	titleHelperStr = 'show only those classes whose course title '
 	titleHelperStr +='contains title'
 
-	parser.add_argument('-t', type=str, nargs='one', metavar='title',
+	parser.add_argument('-t', type=str, nargs=1, metavar='title',
 		dest='title', action='store', default='', 
 		help=titleHelperStr)
 
