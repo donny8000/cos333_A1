@@ -14,7 +14,7 @@ import testreg
 #-----------------------------------------------------------------------
 
 def main():
-	os.system('python testreg.py ref_reg.pyc > out1 2>&1')
+	os.system('python testreg.py reg.py > out1 2>&1')
 	os.system('python testreg.py /../u/cos333/Asgt1Solution/ref_reg.pyc > out2 2>&1')
 	os.system('diff -y out1 out2')
 
