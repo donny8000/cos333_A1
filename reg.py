@@ -31,9 +31,8 @@ def main():
 	parser.add_argument('-t', type=str, nargs='one', metavar='title',
 		dest='title', action='store', default='', 
 		help=titleHelperStr)
-	try:
-		args = parser.parse_args()
-	except 
+
+	args = parser.parse_args()
 
 	if (args.dept != ''):
 		print('department: ' + args.dept[0])
