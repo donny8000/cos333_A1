@@ -13,7 +13,7 @@ def main():
 
 	parser = argparse.ArgumentParser(description=
 		"Registrar application: show overviews of classes")
-	parser.add_argument('-d', type=str, nargs='?', metavar='dept',
+	parser.add_argument('-d', type=str, metavar='dept',
 		dest='dept', action='store', default='', 
 		help='show only those classes whose department contains dept')
 
@@ -35,13 +35,13 @@ def main():
 	args = parser.parse_args()
 
 	if (args.dept != ''):
-		print('department: ' + args.dept[0])
+		print('department: ' + args.dept)
 	if (args.num != ''):
 		print('num: ' + args.num[0])
 	if (args.area != ''):
-		print('area ' + args.area[0])
+		print('area: ' + args.area[0])
 	if (args.title != ''):
-		print('title' + args.title[0])
+		print('title: ' + args.title[0])
 
 
 #-----------------------------------------------------------------------
