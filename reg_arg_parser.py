@@ -10,10 +10,9 @@ import argparse
 #-----------------------------------------------------------------------
 
 def parse_args():
-    # CHANGE THE PROG AND USAGE!!!
+
 	parser = argparse.ArgumentParser(allow_abbrev=False, description=
-		"Registrar application: show overviews of classes",
-		prog='ref_reg.pyc')
+		"Registrar application: show overviews of classes")
 
 	parser.add_argument('-d', type=str, metavar='dept',
 		dest='dept', action='store', default='', 
