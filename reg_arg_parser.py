@@ -9,7 +9,7 @@ import argparse
 
 #-----------------------------------------------------------------------
 
-def parse_args:
+def parse_args():
 
 	parser = argparse.ArgumentParser(description=
 		"Registrar application: show overviews of classes")
