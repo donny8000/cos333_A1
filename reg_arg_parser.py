@@ -13,7 +13,7 @@ def parse_args():
     # CHANGE THE PROG AND USAGE!!!
 	parser = argparse.ArgumentParser(allow_abbrev=False, description=
 		"Registrar application: show overviews of classes",
-		prog='ref_reg.pyc', usage='ref_reg.pyc')
+		prog='ref_reg.pyc')
 
 	parser.add_argument('-d', type=str, metavar='dept',
 		dest='dept', action='store', default='', 
