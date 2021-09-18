@@ -49,7 +49,7 @@ def main():
 				list = []
 				row = cursor.fetchone()
 				while row is not None:
-					list.add(row)
+					list.append(row)
 
 				# if (row is None):
 				# 	print ('Too bad...')
