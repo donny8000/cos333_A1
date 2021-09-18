@@ -8,12 +8,12 @@
 #-----------------------------------------------------------------------
 
 def wildcard(argument):
-	argument.replace("%", "\\%")
-	argument.replace("_", "\\_")
+	argument.replace("%", "apple")
+	argument.replace("_", "banana")
 	return argument
 
 def main():
-	str1 = "Hello\%World"
+	str1 = "Hello%World"
 	print(str1)
 	print(wildcard(str1))
 
