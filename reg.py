@@ -24,7 +24,7 @@ def main():
 
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
-			cursor = connect.cursor()
+			cursor = connection.cursor()
 
 			with closing(connection.cursor()) as cursor:
 
