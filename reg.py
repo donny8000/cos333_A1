@@ -7,7 +7,7 @@
 
 from reg_arg_parser import parse_args
 from reg_wildcard import wildcard
-from sqlit3 import connect
+from sqlite3 import connect
 from sys import stderr, exit 
 from contextlib import closing
 
