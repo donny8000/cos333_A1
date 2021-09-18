@@ -33,9 +33,9 @@ def main():
 				stmt_str += "FROM classes, courses, crosslistings "
 				stmt_str += "WHERE classes.courseid = courses.courseid "
 				stmt_str += "AND classes.courseid = "
-				stmt_str += "crosslistings.courseid "
-				stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
-				stmt_str += "AND area LIKE ? AND title LIKE ?"
+				stmt_str += "crosslistings.courseid"
+				# stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
+				# stmt_str += "AND area LIKE ? AND title LIKE ?"
 				cursor.execute(stmt_str, [dept_goal, num_goal,
 					area_goal, title_goal])
 
