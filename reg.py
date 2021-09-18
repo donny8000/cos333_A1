@@ -46,15 +46,22 @@ def main():
 				cursor.execute(stmt_str, [dept_goal, num_goal, 
 					area_goal, title_goal])
 
+				list = []
 				row = cursor.fetchone()
-				if (row is None):
-					print ('Too bad...')
-				else: 
-					print ('classid:', str(row[0]))
-					print ('dept:', str(row[1]))
-					print ('coursenum:', str(row[2]))
-					print ('area:', str(row[3]))
-					print ('title:', str(row[4]))
+				while row is not None:
+					list.add(row)
+
+				# if (row is None):
+				# 	print ('Too bad...')
+				# else: 
+				# 	print ('classid:', str(row[0]))
+				# 	print ('dept:', str(row[1]))
+				# 	print ('coursenum:', str(row[2]))
+				# 	print ('area:', str(row[3]))
+				# 	print ('title:', str(row[4]))
+
+				for row in list:
+					print (row[0])
 
 	except Exception as ex:
 		print(ex, file=stderr)

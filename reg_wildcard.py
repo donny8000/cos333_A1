@@ -7,9 +7,9 @@
 
 #-----------------------------------------------------------------------
 
-def wildcard(argument):
-	replacement = argument.replace("%", "\\%")
-	replacement = replacement.replace("_", "\\_")
+def wildcard(goal):
+	replace = goal.replace("%", "\\%")
+	replace = replace.replace("_", "\\_")
 	return '%' + replacement + '%'
 
 def main():
