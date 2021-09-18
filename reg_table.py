@@ -21,5 +21,4 @@ def print_table(row_list):
 	for row in row_list:
 		print("ClsId Dept CrsNum Area Title")
 		print("_____ ____ ______ ____ _____")
-		print ('%s %s %s %s %s' % (row[0], row[1],row[2], 
-			row[3], row[4]))
+		row_string = '{:>5} {:>4} {:>6} {:>4} {:}'.format(*row)
