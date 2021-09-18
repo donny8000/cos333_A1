@@ -9,7 +9,7 @@
 
 def wildcard(argument):
 	argument.replace("%", "apple")
-	argument.replace("_", "banana")
+	argument.replace("Goodbye", "banana")
 	return argument
 
 def main():
