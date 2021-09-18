@@ -28,8 +28,9 @@ def main():
 
 			with closing(connection.cursor()) as cursor:
 
-				stmt_str = "SELECT classid dept coursenum area title "
-				stmt_str += "FROM classes, coures, crosslistings "
+				stmt_str = "SELECT classid, dept, coursenum, "
+				stmt_str = "area, title "
+				stmt_str += "FROM classes, courses, crosslistings "
 				stmt_str += "WHERE classes.courseid = courses.courseid "
 				stmt_str += "AND classes.courseid = "
 				stmt_str += "crosslistings.courseid "
