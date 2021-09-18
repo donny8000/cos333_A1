@@ -40,7 +40,7 @@ def main():
 				stmt_str += "AND title LIKE ? OR ? = ''"
 				cursor.execute(stmt_str, [dept_goal, dept_goal,
 					num_goal, num_goal, area_goal, area_goal, 
-					title_goal, title_goal]
+					title_goal, title_goal])
 
 				row = cursor.fetchone()
 				if (row is None):
