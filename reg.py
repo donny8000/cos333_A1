@@ -42,7 +42,7 @@ def main():
 				stmt_str += "AND dept LIKE ? " 
 				stmt_str += "AND coursenum LIKE ? "
 				stmt_str += "AND area LIKE ? "
-				stmt_str += "AND title LIKE ? ESCAPE '\'"
+				stmt_str += "AND title LIKE ? ESCAPE '\\'"
 				cursor.execute(stmt_str, [dept_goal, num_goal, 
 					area_goal, title_goal])
 
