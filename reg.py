@@ -10,7 +10,7 @@ from reg_arg_parser import parse_args
 #-----------------------------------------------------------------------
 
 def main():
-	parse_args()
+	args = parse_args()
 
 	if (args.dept != ''):
 		print('department: ' + args.dept)

@@ -34,3 +34,5 @@ def parse_args():
 		help=titleHelperStr)
 
 	args = parser.parse_args()
+
+	return args
