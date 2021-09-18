@@ -22,10 +22,10 @@ def main():
 	area_goal = wildcard(args.area)
 	title_goal = wildcard(args.title)
 
-	print('dept_goal:' dept_goal)
-	print('num_goal:' num_goal)
-	print('area_goal:' area_goal)
-	print('title_goal:' title_goal)
+	print('dept_goal:', dept_goal)
+	print('num_goal:', num_goal)
+	print('area_goal:', area_goal)
+	print('title_goal:', title_goal)
 
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
