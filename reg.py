@@ -39,13 +39,12 @@ def main():
 				stmt_str += "WHERE classes.courseid = courses"
 				stmt_str += ".courseid AND classes.courseid = "
 				stmt_str += "crosslistings.courseid "
-				stmt_str += "AND dept LIKE ? OR ? = '' " 
-				stmt_str += "AND coursenum LIKE ? OR ? = '' "
-				stmt_str += "AND area LIKE ? OR ? = '' "
-				stmt_str += "AND title LIKE ? OR ? = ''"
-				cursor.execute(stmt_str, [dept_goal, dept_goal,
-					num_goal, num_goal, area_goal, area_goal, 
-					title_goal, title_goal])
+				stmt_str += "AND dept LIKE ? " 
+				stmt_str += "AND coursenum LIKE ? "
+				stmt_str += "AND area LIKE ? "
+				stmt_str += "AND title LIKE ?"
+				cursor.execute(stmt_str, [dept_goal, num_goal, 
+					area_goal, title_goal])
 
 				row = cursor.fetchone()
 				if (row is None):
