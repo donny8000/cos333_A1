@@ -23,7 +23,7 @@ def main():
 	title_goal = wildcard(args.title)
 
 	try: 
-		with connect (DATABASE_URLm uri=True) as connection:
+		with connect (DATABASE_URL, uri=True) as connection:
 			cursor = connect.cursor()
 
 			with closing(connection.cursor()) as cursor
