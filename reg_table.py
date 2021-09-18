@@ -5,6 +5,8 @@
 # Authors: Donovan Pearce and Annette Lee
 #-----------------------------------------------------------------------
 
+from operator import itemgetter
+
 #-----------------------------------------------------------------------
 
 def sort_rows(row_list):
