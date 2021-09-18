@@ -10,6 +10,7 @@ from reg_wildcard import wildcard
 from sqlite3 import connect
 from sys import stderr, exit 
 from contextlib import closing
+from reg_table import sort_rows
 
 #-----------------------------------------------------------------------
 
@@ -46,11 +47,13 @@ def main():
 				cursor.execute(stmt_str, [dept_goal, num_goal, 
 					area_goal, title_goal])
 
-				list = []
+				row_list = []
 				row = cursor.fetchone()
 				while row is not None:
-					list.append(row)
+					row_list.append(row)
 					row = cursor.fetchone()
+
+				row_list = sort_rows(row_list)
 
 				# if (row is None):
 				# 	print ('Too bad...')
@@ -61,7 +64,7 @@ def main():
 				# 	print ('area:', str(row[3]))
 				# 	print ('title:', str(row[4]))
 
-				for row in list:
+				for row in row_list:
 					print (row[0])
 
 	except Exception as ex:
