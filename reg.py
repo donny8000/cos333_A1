@@ -10,7 +10,7 @@ from reg_wildcard import wildcard
 from sqlite3 import connect
 from sys import stderr, exit 
 from contextlib import closing
-from reg_table import sort_rows
+from reg_table import print_table
 
 #-----------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ def main():
 					row_list.append(row)
 					row = cursor.fetchone()
 
-				row_list = sort_rows(row_list)
+				print_table (row_list)
 
 				# if (row is None):
 				# 	print ('Too bad...')
@@ -63,9 +63,6 @@ def main():
 				# 	print ('coursenum:', str(row[2]))
 				# 	print ('area:', str(row[3]))
 				# 	print ('title:', str(row[4]))
-
-				for row in row_list:
-					print (row[0])
 
 	except Exception as ex:
 		print(ex, file=stderr)

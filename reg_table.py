@@ -14,3 +14,12 @@ def sort_rows(row_list):
 	result = sorted(result, key=itemgetter(2))
 	result = sorted(result, key=itemgetter(1))
 	return result
+
+def print_table(row_list): 
+	row_list = sort_rows(row_list)
+
+	for row in row_list:
+		print("ClsId Dept CrsNum Area Title")
+		print("_____ ____ ______ ____ _____")
+		print ("%s %s %s %s %s" % (row_list[0], row_list[1]),
+			row_list[2], row_list[3], row_list[4])
