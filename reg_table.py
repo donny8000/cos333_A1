@@ -24,5 +24,5 @@ def print_table(row_list):
 
 	for row in row_list:
 		row_string = '{:>5} {:>4} {:>6} {:>4} {:}'.format(*row)
-		print(textwrap.fill(row_string, width=72, tabsize=29,
-			subsequent_indent="\t"))
+		print(textwrap.fill(row_string, width=72,
+			subsequent_indent="                             "));
