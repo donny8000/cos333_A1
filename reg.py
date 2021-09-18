@@ -22,6 +22,11 @@ def main():
 	area_goal = wildcard(args.area)
 	title_goal = wildcard(args.title)
 
+	print ('dept_goal:', dept_goal)
+	print ('num_goal:', num_goal)
+	print ('area_goal', area_goal)
+	print ('title_goal', title_goal)
+
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
 			cursor = connection.cursor()
@@ -33,10 +38,11 @@ def main():
 				stmt_str += "FROM classes, courses, crosslistings "
 				stmt_str += "WHERE classes.courseid = courses.courseid "
 				stmt_str += "AND classes.courseid = "
-				stmt_str += "crosslistings.courseid"
-				# stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
+				stmt_str += "crosslistings.courseid "
+				stmt_str += "AND dept LIKE ?" 
+				#AND coursenum LIKE ? "
 				# stmt_str += "AND area LIKE ? AND title LIKE ?"
-				cursor.execute(stmt_str)
+				cursor.execute(stmt_str, [dept_goal])
 				#[dept_goal, num_goal, area_goal, title_goal]
 
 				row = cursor.fetchone()
