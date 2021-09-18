@@ -65,7 +65,7 @@ def main():
 				# 	print ('title:', str(row[4]))
 
 	except Exception as ex:
-		# print(ex, file=stderr)
+		print(ex, file=stderr)
 		exit(1)
 
 	# if (dept != ''):
