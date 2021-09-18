@@ -17,19 +17,10 @@ DATABASE_URL ='file:reg.sqlite?mode=ro'
 
 def main():
 	args = parse_args()
-	# dept_goal = wildcard(args.dept)
-	# num_goal = wildcard(args.num)
-	# area_goal = wildcard(args.area)
-	# title_goal = wildcard(args.title)
-	dept_goal = ""
-	num_goal = ""
-	area_goal = ""
-	title_goal = ""
-
-	print ('dept_goal:', dept_goal)
-	print ('num_goal:', num_goal)
-	print ('area_goal', area_goal)
-	print ('title_goal', title_goal)
+	dept_goal = wildcard(args.dept)
+	num_goal = wildcard(args.num)
+	area_goal = wildcard(args.area)
+	title_goal = wildcard(args.title)
 
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
@@ -40,14 +31,16 @@ def main():
 				stmt_str = "SELECT classid, dept, coursenum, "
 				stmt_str += "area, title "
 				stmt_str += "FROM classes, courses, crosslistings "
-				stmt_str += "WHERE classes.courseid = courses.courseid "
-				stmt_str += "AND classes.courseid = "
+				stmt_str += "WHERE classes.courseid = courses"
+				stmt_str += ".courseid AND classes.courseid = "
 				stmt_str += "crosslistings.courseid "
-				stmt_str += "AND dept LIKE ? OR ? = ''" 
-				#AND coursenum LIKE ? "
-				# stmt_str += "AND area LIKE ? AND title LIKE ?"
-				cursor.execute(stmt_str, [dept_goal, dept_goal])
-				#[dept_goal, num_goal, area_goal, title_goal]
+				stmt_str += "AND dept LIKE ? OR ? = '' " 
+				stmt_str += "AND coursenum LIKE ? OR ? = '' "
+				stmt_str += "AND area LIKE ? OR ? = '' "
+				stmt_str += "AND title LIKE ? OR ? = ''"
+				cursor.execute(stmt_str, [dept_goal, dept_goal,
+					num_goal num_goal, area_goal, area_goal, 
+					title_goal, title_goal]
 
 				row = cursor.fetchone()
 				if (row is None):
