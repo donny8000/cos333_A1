@@ -36,8 +36,8 @@ def main():
 				stmt_str += "crosslistings.courseid"
 				# stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
 				# stmt_str += "AND area LIKE ? AND title LIKE ?"
-				cursor.execute(stmt_str, [dept_goal, num_goal,
-					area_goal, title_goal])
+				cursor.execute(stmt_str)
+				#[dept_goal, num_goal, area_goal, title_goal]
 
 				row = cursor.fetchone()
 				if (row is None):
