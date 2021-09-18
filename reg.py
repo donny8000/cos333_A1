@@ -46,7 +46,7 @@ def main():
 				stmt_str += "AND dept LIKE ? OR ? = ''" 
 				#AND coursenum LIKE ? "
 				# stmt_str += "AND area LIKE ? AND title LIKE ?"
-				cursor.execute(stmt_str, [dept_goal])
+				cursor.execute(stmt_str, [dept_goal, dept_goal])
 				#[dept_goal, num_goal, area_goal, title_goal]
 
 				row = cursor.fetchone()
