@@ -50,6 +50,7 @@ def main():
 				row = cursor.fetchone()
 				while row is not None:
 					list.append(row)
+					row = cursor.fetchone()
 
 				# if (row is None):
 				# 	print ('Too bad...')
