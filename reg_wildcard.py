@@ -10,7 +10,7 @@
 def wildcard(argument):
 	replacement = argument.replace("%", "\\%")
 	replacement = replacement.replace("_", "\\_")
-	return str(replacement)
+	return replacement
 
 def main():
 	str1 = "Hello%World"

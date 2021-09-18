@@ -17,10 +17,14 @@ DATABASE_URL ='file:reg.sqlite?mode=ro'
 
 def main():
 	args = parse_args()
-	dept_goal = wildcard(args.dept)
-	num_goal = wildcard(args.num)
-	area_goal = wildcard(args.area)
-	title_goal = wildcard(args.title)
+	# dept_goal = wildcard(args.dept)
+	# num_goal = wildcard(args.num)
+	# area_goal = wildcard(args.area)
+	# title_goal = wildcard(args.title)
+	dept_goal = ""
+	num_goal = ""
+	area_goal = ""
+	title_goal = ""
 
 	print ('dept_goal:', dept_goal)
 	print ('num_goal:', num_goal)
