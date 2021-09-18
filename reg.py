@@ -43,7 +43,7 @@ def main():
 				stmt_str += "WHERE classes.courseid = courses.courseid "
 				stmt_str += "AND classes.courseid = "
 				stmt_str += "crosslistings.courseid "
-				stmt_str += "AND dept LIKE ?" 
+				stmt_str += "AND dept LIKE ? OR ? = ''" 
 				#AND coursenum LIKE ? "
 				# stmt_str += "AND area LIKE ? AND title LIKE ?"
 				cursor.execute(stmt_str, [dept_goal])
