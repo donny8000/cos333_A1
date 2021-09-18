@@ -40,7 +40,7 @@ def main():
 					area_goal, title_goal])
 
 				row = cursor.fetchone()
-				if (row is None)
+				if (row is None):
 					print ('Too bad...')
 				# print ('classid:', str(row[0]))
 				# print ('dept:', str(row[1]))
