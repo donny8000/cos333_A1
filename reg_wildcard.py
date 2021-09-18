@@ -8,8 +8,8 @@
 #-----------------------------------------------------------------------
 
 def wildcard(argument):
-	replacement = argument.replace("%", "apple")
-	replacement = replacement.replace("Goodbye", "banana")
+	replacement = argument.replace("%", "\\%")
+	replacement = replacement.replace("_", "\\_")
 	return replacement
 
 def main():
