@@ -10,7 +10,7 @@
 def wildcard(goal):
 	replace = goal.replace("%", "\\%")
 	replace = replace.replace("_", "\\_")
-	return '%' + replacement + '%'
+	return '%' + replace + '%'
 
 def main():
 	str1 = "Hello%World"
