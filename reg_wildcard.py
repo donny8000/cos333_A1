@@ -8,9 +8,9 @@
 #-----------------------------------------------------------------------
 
 def wildcard(argument):
-	argument.replace("%", "apple")
-	argument.replace("Goodbye", "banana")
-	return argument
+	replacement = argument.replace("%", "apple")
+	replacement = replacement.replace("Goodbye", "banana")
+	return replacement
 
 def main():
 	str1 = "Hello%World"
