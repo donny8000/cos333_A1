@@ -22,4 +22,4 @@ def print_table(row_list):
 		print("ClsId Dept CrsNum Area Title")
 		print("_____ ____ ______ ____ _____")
 		print ('%s %s %s %s %s' % (row_list[0], row_list[1],
-			row_list[2], row_list[3], row_list[4])
+			row_list[2], row_list[3], row_list[4]))
