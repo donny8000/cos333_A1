@@ -18,8 +18,9 @@ def sort_rows(row_list):
 def print_table(row_list): 
 	row_list = sort_rows(row_list)
 
+	print("ClsId Dept CrsNum Area Title")
+	print("----- ---- ------ ---- -----")
+
 	for row in row_list:
-		print("ClsId Dept CrsNum Area Title")
-		print("_____ ____ ______ ____ _____")
 		row_string = '{:>5} {:>4} {:>6} {:>4} {:}'.format(*row)
 		print(row_string)
