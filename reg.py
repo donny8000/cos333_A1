@@ -40,11 +40,11 @@ def main():
 					area_goal, title_goal])
 
 				row = cursor.fetchone()
-				print ('classid:', str(row[0]))
-				print ('dept:', str(row[1]))
-				print ('coursenum:', str(row[2]))
-				print ('area:', str(row[3]))
-				print ('title:', str(row[4]))
+				# print ('classid:', str(row[0]))
+				# print ('dept:', str(row[1]))
+				# print ('coursenum:', str(row[2]))
+				# print ('area:', str(row[3]))
+				# print ('title:', str(row[4]))
 
 	except Exception as ex:
 		print(ex, file=stderr)
