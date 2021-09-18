@@ -26,24 +26,24 @@ def main():
 		with connect (DATABASE_URL, uri=True) as connection:
 			cursor = connect.cursor()
 
-			with closing(connection.cursor()) as cursor
+			with closing(connection.cursor()) as cursor:
 
-			stmt_str = "SELECT classid dept coursenum area title "
-			stmt_str += "FROM classes, coures, crosslistings "
-			stmt_str += "WHERE classes.courseid = courses.courseid "
-			stmt_str += "AND classes.courseid = "
-			stmt_str += "crosslistings.courseid "
-			stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
-			stmt_str += "AND area LIKE ? AND title LIKE ?"
-			cursor.execute(stmt_str, [dept_goal, num_goal,
-				area_goal, title_goal])
+				stmt_str = "SELECT classid dept coursenum area title "
+				stmt_str += "FROM classes, coures, crosslistings "
+				stmt_str += "WHERE classes.courseid = courses.courseid "
+				stmt_str += "AND classes.courseid = "
+				stmt_str += "crosslistings.courseid "
+				stmt_str += "AND dept LIKE ? AND coursenum LIKE ? "
+				stmt_str += "AND area LIKE ? AND title LIKE ?"
+				cursor.execute(stmt_str, [dept_goal, num_goal,
+					area_goal, title_goal])
 
-			row = cursor.fetchone()
-			print ('classid:', str(row[0]))
-			print ('dept:', str(row[1]))
-			print ('coursenum:', str(row[2]))
-			print ('area:', str(row[3]))
-			print ('title:', str(row[4]))
+				row = cursor.fetchone()
+				print ('classid:', str(row[0]))
+				print ('dept:', str(row[1]))
+				print ('coursenum:', str(row[2]))
+				print ('area:', str(row[3]))
+				print ('title:', str(row[4]))
 
 	except Exception as ex:
 		print(ex, file=stderr)
