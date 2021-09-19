@@ -33,7 +33,7 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	for crosslisting_row in crosslistings_list:
 		print("Dept and Number: %s %s" 
-			%(crosslisting_row[0] crosslisting_row[1]))
+			%(crosslisting_row[0], crosslisting_row[1]))
 
 	print()
 
