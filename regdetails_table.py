@@ -22,7 +22,7 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 	crosslistings_list = sort_crosslisting_rows(crosslistings_list)
 	prof_list = sorted(prof_list)
 
-	result = format("Course Id:", str(class_row[0]))
+	print(format("Course Id:", str(class_row[0])))
 
 	# result += "\n"
 
