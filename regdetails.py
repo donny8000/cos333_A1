@@ -7,6 +7,9 @@
 
 from regdetails_arg_parser import parse_args
 from regdetails_table import print_table
+from sqlite3 import connect
+from sys import stderr, exit 
+from contextlib import closing
 
 #-----------------------------------------------------------------------
 
@@ -77,7 +80,7 @@ def main():
 					row = cursor.fetchone()
 					prof_list.append(row[0])
 				exit(0)
-				
+
 	except Exception as ex:
 		print(ex, file=stderr)
 		exit(1)
