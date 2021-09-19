@@ -22,40 +22,40 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 	crosslistings_list = sort_crosslisting_rows(crosslistings_list)
 	prof_list = sorted(prof_list)
 
-	result = wrap("Course Id: %s" %class_row[0])
+	result = wrap("Course Id: %s\n" %class_row[0])
 	result += "\n"
 
-	result += wrap("Days: %s" %class_row[1])
-	result += wrap("Start Time: %s" %class_row[2])
-	result += wrap("End Time: %s" %class_row[3])
-	result += wrap("Building: %s" %class_row[4])
-	result += wrap("Room: %s" %class_row[5])
+	result += wrap("Days: %s\n" %class_row[1])
+	result += wrap("Start Time: %s\n" %class_row[2])
+	result += wrap("End Time: %s\n" %class_row[3])
+	result += wrap("Building: %s\n" %class_row[4])
+	result += wrap("Room: %s\n" %class_row[5])
 
 	result += "\n"
 
 	for crosslisting_row in crosslistings_list:
-		result += wrap("Dept and Number: %s %s" 
+		result += wrap("Dept and Number: %s %s\n" 
 			%(crosslisting_row[0], crosslisting_row[1]))
 
 	result += "\n"
 
-	result += wrap("Area: %s" %course_row[0])
+	result += wrap("Area: %s\n" %course_row[0])
 
 	result += "\n"
 
-	result += wrap("Title: %s" %course_row[1])
+	result += wrap("Title: %s\n" %course_row[1])
 
 	result += "\n"
 
-	result += wrap("Description: %s" %course_row[2])
+	result += wrap("Description: %s\n" %course_row[2])
 
 	result += "\n"
 
-	result += wrap("Prerequisites: %s" %course_row[3])
+	result += wrap("Prerequisites: %s\n" %course_row[3])
 
 	result += "\n"
 
 	for prof in prof_list:
-		result += wrap("Professor: %s" %prof)
+		result += wrap("Professor: %s\n" %prof)
 
 	print(result)
