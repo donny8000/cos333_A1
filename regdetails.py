@@ -8,7 +8,7 @@
 from regdetails_arg_parser import parse_args
 from regdetails_table import print_table
 from sqlite3 import connect
-from sys import stderr, exit 
+from sys import stderr, exit, argv 
 from contextlib import closing
 
 #-----------------------------------------------------------------------
@@ -37,7 +37,7 @@ def main():
 				if class_row is None:
 					raise ValueError(
 						'%s: no class with classid %d exists' % (
-							args[0], id_goal))
+							argv[0], id_goal))
 
 				course_id_goal = class_row[0]
 
