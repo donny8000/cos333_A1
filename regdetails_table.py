@@ -58,4 +58,4 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	# for prof in prof_list:
 	# 	result += wrap(format("Professor:", prof))
-	print(result)
+	# print(result)
