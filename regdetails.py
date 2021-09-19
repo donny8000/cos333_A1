@@ -8,7 +8,7 @@
 from regdetails_arg_parser import parse_args
 
 def main():
-	args = parse_args
+	args = parse_args()
 	print (args.classid)
 
 #-----------------------------------------------------------------------	
