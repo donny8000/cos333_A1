@@ -34,9 +34,9 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	result += "\n"
 
-	for crosslisting_row in crosslistings_list:
-		result += wrap(format("Dept and Number: %s %s" 
-			%(crosslisting_row[0], crosslisting_row[1])))
+	# for crosslisting_row in crosslistings_list:
+	# 	result += wrap(format("Dept and Number: %s %s" 
+	# 		%(crosslisting_row[0], crosslisting_row[1])))
 
 	result += "\n"
 
