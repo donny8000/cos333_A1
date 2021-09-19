@@ -46,9 +46,9 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	area_val = course_row[0]
 	if area_val == '':
-		area_val = ' '
-
-	result += wrap("Area: %s" %area_val)
+		result += "Area: "
+	else:
+		result += wrap("Area: %s" %area_val)
 
 	result += "\n\n"
 
