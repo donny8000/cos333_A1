@@ -12,9 +12,9 @@ import textwrap
 
 def sort_rows(row_list):
     result = sorted(row_list, key=itemgetter(0))
-	result = sorted(result, key=itemgetter(2))
-	result = sorted(result, key=itemgetter(1))
-	return result
+    result = sorted(result, key=itemgetter(2))
+    result = sorted(result, key=itemgetter(1))
+    return result
 
 def print_table(row_list):
 	row_list = sort_rows(row_list)
