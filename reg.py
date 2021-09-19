@@ -8,7 +8,7 @@
 from reg_arg_parser import parse_args
 from reg_wildcard import wildcard
 from sqlite3 import connect
-from sys import stderr, exit 
+from sys import stderr, exit
 from contextlib import closing
 from reg_table import print_table
 
@@ -17,15 +17,15 @@ from reg_table import print_table
 DATABASE_URL ='file:reg.sqlite?mode=ro'
 
 def main():
-	args = parse_args()
-	dept_goal = wildcard(args.dept)
-	num_goal = wildcard(args.num)
-	area_goal = wildcard(args.area)
-	title_goal = wildcard(args.title)
+    args = parse_args()
+    dept_goal = wildcard(args.dept)
+    num_goal = wildcard(args.num)
+    area_goal = wildcard(args.area)
+    title_goal = wildcard(args.title)
 
-	try: 
-		with connect (DATABASE_URL, uri=True) as connection:
-			cursor = connection.cursor()
+    try:
+            with connect (DATABASE_URL, uri=True) as connection:
+            cursor = connection.cursor()
 
 			with closing(connection.cursor()) as cursor:
 

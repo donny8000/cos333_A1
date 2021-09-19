@@ -6,7 +6,7 @@
 #-----------------------------------------------------------------------
 
 from regdetails_arg_parser import parse_args
-from regdetails_table import print_table
+from regdetails_output import print_table
 from sqlite3 import connect
 from sys import stderr, exit, argv 
 from contextlib import closing
@@ -18,7 +18,6 @@ DATABASE_URL ='file:reg.sqlite?mode=ro'
 def main():
 	args = parse_args()
 	id_goal = args.classid
-
 
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
