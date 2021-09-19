@@ -27,9 +27,9 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	result += wrap("Days: %s" %class_row[1])
 	result += "\n"
-	result += wrap("Start Time: %s" %class_row[2])
+	result += wrap("Start Time: %s " %class_row[2])
 	result += "\n"
-	result += wrap("End Time: %s" %class_row[3])
+	result += wrap("End Time: %s " %class_row[3])
 	result += "\n"
 	result += wrap("Building: %s" %class_row[4])
 	result += "\n"
@@ -44,7 +44,7 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	result += "\n\n"
 
-	result += wrap("Area: %s" %course_row[0])
+	result += wrap("Area: %s " %course_row[0])
 
 	result += "\n\n"
 
