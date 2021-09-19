@@ -27,7 +27,8 @@ def main():
 			with closing(connection.cursor()) as cursor:
 
 				stmt_str = "SELECT courseid, days, starttime, endtime, "
-				stmt_str += "bldg, roomnum WHERE classid = ?" 
+				stmt_str += "bldg, roomnum FROM classes " 
+				stmt_str += "WHERE classid = ?"
 
 				cursor.execute(stmt_str, [id_goal])
 
@@ -46,7 +47,7 @@ def main():
 
 				course_row = cursor.fetchone()
 
-				stmt_str = "SELECT dept, coursenum from crosslistings "
+				stmt_str = "SELECT dept, coursenum FROM crosslistings "
 				stmt_str += "WHERE crosslistings.courseid = ?"
 
 
@@ -58,7 +59,7 @@ def main():
 					crosslistings_list.append(row)
 					row = cursor.fetchone()
 
-				stmt_str = "SELECT profid from courseprofs "
+				stmt_str = "SELECT profid FROM courseprofs "
 				stmt_str += "WHERE courseprofs.courseid = ?"
 
 				cursor.execute(stmt_str, [course_id_goal])
@@ -72,7 +73,7 @@ def main():
 
 				prof_list = []
 				for courseprofs_row in courseprofs_list:
-					stmt_str = "SELECT profname from profs "
+					stmt_str = "SELECT profname FROM profs "
 					stmt_str += "WHERE profs.profid = ?"
 
 					cursor.execute(stmt_str, [courseprofs_row[0]])
