@@ -44,23 +44,23 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	result += "\n\n"
 
-	result += wrap("Area: %s\n" %course_row[0])
+	result += wrap("Area: %s" %course_row[0])
 
 	result += "\n\n"
 
-	result += wrap("Title: %s\n" %course_row[1])
+	result += wrap("Title: %s" %course_row[1])
 
 	result += "\n\n"
 
-	result += wrap("Description: %s\n" %course_row[2])
+	result += wrap("Description: %s" %course_row[2])
 
 	result += "\n\n"
 
-	result += wrap("Prerequisites: %s\n" %course_row[3])
+	result += wrap("Prerequisites: %s" %course_row[3])
 
 	result += "\n\n"
 
 	for prof in prof_list:
-		result += wrap("Professor: %s\n" %prof)
+		result += wrap("Professor: %s" %prof)
 
 	print(result)
