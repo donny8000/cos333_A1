@@ -45,8 +45,8 @@ def main():
                 row = cursor.fetchone()
 
                 while row is not None:
-				    row_list.append(row)
-				    row = cursor.fetchone()
+                    row_list.append(row)
+                    row = cursor.fetchone()
 
 		print_table (row_list)
 
