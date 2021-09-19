@@ -24,29 +24,28 @@ def main():
     title_goal = wildcard(args.title)
 
     try:
-            with connect (DATABASE_URL, uri=True) as connection:
-            cursor = connection.cursor()
+        with connect (DATABASE_URL, uri=True) as connection:
+            
+            with closing(connection.cursor()) as cursor:
 
-			with closing(connection.cursor()) as cursor:
+			stmt_str = "SELECT classid, dept, coursenum, "
+			stmt_str += "area, title "
+			stmt_str += "FROM classes, courses, crosslistings "
+			stmt_str += "WHERE classes.courseid = courses"
+			stmt_str += ".courseid AND classes.courseid = "
+			stmt_str += "crosslistings.courseid "
+			stmt_str += "AND dept LIKE ? " 
+			stmt_str += "AND coursenum LIKE ? "
+			stmt_str += "AND area LIKE ? "
+			stmt_str += "AND title LIKE ? ESCAPE '\\'"
+			cursor.execute(stmt_str, [dept_goal, num_goal, 
+				area_goal, title_goal])
 
-				stmt_str = "SELECT classid, dept, coursenum, "
-				stmt_str += "area, title "
-				stmt_str += "FROM classes, courses, crosslistings "
-				stmt_str += "WHERE classes.courseid = courses"
-				stmt_str += ".courseid AND classes.courseid = "
-				stmt_str += "crosslistings.courseid "
-				stmt_str += "AND dept LIKE ? " 
-				stmt_str += "AND coursenum LIKE ? "
-				stmt_str += "AND area LIKE ? "
-				stmt_str += "AND title LIKE ? ESCAPE '\\'"
-				cursor.execute(stmt_str, [dept_goal, num_goal, 
-					area_goal, title_goal])
-
-				row_list = []
+			row_list = []
+			row = cursor.fetchone()
+			while row is not None:
+				row_list.append(row)
 				row = cursor.fetchone()
-				while row is not None:
-					row_list.append(row)
-					row = cursor.fetchone()
 
 		print_table (row_list)
 
