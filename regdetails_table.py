@@ -62,5 +62,6 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	for prof in prof_list:
 		result += wrap("Professor: %s" %prof)
+		result += "\n"
 
 	print(result)
