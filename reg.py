@@ -23,11 +23,6 @@ def main():
 	area_goal = wildcard(args.area)
 	title_goal = wildcard(args.title)
 
-	# print('dept_goal:', dept_goal)
-	# print('num_goal:', num_goal)
-	# print('area_goal:', area_goal)
-	# print('title_goal:', title_goal)
-
 	try: 
 		with connect (DATABASE_URL, uri=True) as connection:
 			cursor = connection.cursor()
@@ -54,28 +49,12 @@ def main():
 					row = cursor.fetchone()
 
 				print_table (row_list)
+				exit(0)
 
-				# if (row is None):
-				# 	print ('Too bad...')
-				# else: 
-				# 	print ('classid:', str(row[0]))
-				# 	print ('dept:', str(row[1]))
-				# 	print ('coursenum:', str(row[2]))
-				# 	print ('area:', str(row[3]))
-				# 	print ('title:', str(row[4]))
 
 	except Exception as ex:
 		print(ex, file=stderr)
 		exit(1)
-
-	# if (dept != ''):
-	# 	print('department: ' + dept)
-	# if (num != ''):
-	# 	print('num: ' + num)
-	# if (area != ''):
-	# 	print('area: ' + area)
-	# if (title != ''):
-	# 	print('title: ' + title)
 
 
 #-----------------------------------------------------------------------
