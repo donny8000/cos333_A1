@@ -59,8 +59,8 @@ def main():
 					crosslistings_list.append(row)
 					row = cursor.fetchone()
 
-				stmt_str = "SELECT profid FROM courseprofs "
-				stmt_str += "WHERE courseprofs.courseid = ?"
+				stmt_str = "SELECT profid FROM coursesprofs "
+				stmt_str += "WHERE coursesprofs.courseid = ?"
 
 				cursor.execute(stmt_str, [course_id_goal])
 
