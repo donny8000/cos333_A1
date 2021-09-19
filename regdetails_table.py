@@ -17,7 +17,7 @@ def sort_crosslisting_rows(row_list):
 
 def print_table(class_row, course_row, crosslistings_list, prof_list): 
 	crosslistings_list = sort_crosslisting_rows(crosslistings_list)
-	prof_list = sort(prof_list)
+	prof_list = sorted(prof_list)
 
 	print("Course Id:", class_row[0])
 
