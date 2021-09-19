@@ -14,9 +14,8 @@ def parse_args():
 	parser = argparse.ArgumentParser(description=
 		"Registrar application: show details about a class")
 
-	parser.add_argument('id', type=str, metavar='classid',
-		dest='classid', action='store', required=True, 
-		help='show only those classes whose department contains dept')
+	parser.add_argument('id', type=str, metavar='classid', 
+		action='store', help='show only those classes whose department contains dept')
 
 	args = parser.parse_args()
 
