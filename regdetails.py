@@ -80,6 +80,9 @@ def main():
 
 					row = cursor.fetchone()
 					prof_list.append(row[0])
+
+				print_table(class_row, course_row, 
+					crosslistings_list, prof_list)	
 				exit(0)
 
 	except Exception as ex:
