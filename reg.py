@@ -48,8 +48,7 @@ def main():
 					row_list.append(row)
 					row = cursor.fetchone()
 
-				print_table (row_list)
-				exit(0)
+		print_table (row_list)
 
 
 	except Exception as ex:

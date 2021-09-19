@@ -1,0 +1,42 @@
+Names: Donovan Pearce and Annette Lee
+Assignment Number 1
+
+Donovan Pearce's Contribution:
+We decided to primarily use my computer fot the assignment, so
+I was involved in typing up the whole project. I worked to 
+first get a sense of the database and help with the planning 
+of how to approach the project. I, along with Annette, 
+worked on each aspect of the project, from parsing the 
+arguments, to calling the database through sqlite, to 
+outputting the results. I also helped to develop testing, 
+creating a program which could run our code and compare it 
+to the reference program. I also assisted in debugging, 
+looking at where our code differed from the desired output 
+and working to make it consistent.
+
+Annette Lee's Contribution:
+
+
+Help from Other People: None
+
+Sources of Information:
+We used several online resources while composing the assignment, 
+ranging from documentation to assistance with specific issues.
+
+1. Documentation for argparse, https://www.cs.princeton.edu/courses/archive/fall21/cos333/asgts/01registrardb/index.html
+
+2. Documentation for textwrap, https://docs.python.org/3/library/textwrap.html
+
+3. Documentation for sorting, https://docs.python.org/3/howto/sorting.html
+
+4. Guide for formatting strings, https://pyformat.info
+
+5. Stack Overflow post on getting exit status in bash, https://stackoverflow.com/questions/36837149/get-exit-status-of-a-process-in-bash
+
+6. Stack Overflow post on formatting an output string with right alignment, https://stackoverflow.com/questions/8234445/format-output-string-right-alignment
+
+7. Guide for Python replace method for strings, https://www.w3schools.com/python/ref_string_replace.asp
+
+Time Spend on the Assignment: 10 hours 
+
+Assessment: 
