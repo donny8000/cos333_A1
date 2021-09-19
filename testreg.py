@@ -41,7 +41,7 @@ def main():
 	execute_command('-t "Independent Study  "')
 	execute_command('-t " Independent Study"')
 	execute_command('-t "  Independent Study"')
-	execute_command('-t = -c')
+	execute_command('-t=-c')
 
 
 #-----------------------------------------------------------------------
