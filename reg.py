@@ -48,12 +48,11 @@ def main():
                     row_list.append(row)
                     row = cursor.fetchone()
 
-		print_table (row_list)
+            print_table (row_list)
 
-
-	except Exception as ex:
-		print(ex, file=stderr)
-		exit(1)
+    except Exception as ex:
+        print(ex, file=stderr)
+        exit(1)
 
 
 #-----------------------------------------------------------------------
