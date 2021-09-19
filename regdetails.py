@@ -36,7 +36,8 @@ def main():
 
 				if class_row is None:
 					raise ValueError(
-						'no class with classid %d exists' % id_goal)
+						'%s: no class with classid %d exists' % (
+							args[0], id_goal))
 
 				course_id_goal = class_row[0]
 
