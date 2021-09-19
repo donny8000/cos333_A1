@@ -5,11 +5,11 @@
 # Authors: Donovan Pearce and Annette Lee
 #-----------------------------------------------------------------------
 
-from reg_arg_parser import parse_args
-from reg_wildcard import wildcard
 from sqlite3 import connect
 from sys import stderr, exit
 from contextlib import closing
+from reg_arg_parser import parse_args
+from reg_wildcard import wildcard
 from reg_table import print_table
 
 #-----------------------------------------------------------------------
@@ -38,7 +38,7 @@ def main():
                 stmt_str += "AND coursenum LIKE ? "
                 stmt_str += "AND area LIKE ? "
                 stmt_str += "AND title LIKE ? ESCAPE '\\'"
-                cursor.execute(stmt_str, [dept_goal, num_goal, 
+                cursor.execute(stmt_str, [dept_goal, num_goal,
 				    area_goal, title_goal])
 
                 row_list = []
@@ -58,4 +58,4 @@ def main():
 #-----------------------------------------------------------------------
 
 if __name__ == '__main__':
-	main()
+    main()
