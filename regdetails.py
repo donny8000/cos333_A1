@@ -53,7 +53,7 @@ def main():
 
 				cursor.execute(stmt_str, [course_id_goal])
 
-				crossliststings_list = [] 
+				crosslistings_list = [] 
 				row = cursor.fetchone() 
 				while row is not None:
 					crosslistings_list.append(row)
