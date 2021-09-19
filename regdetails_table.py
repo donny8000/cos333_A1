@@ -22,7 +22,7 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 	crosslistings_list = sort_crosslisting_rows(crosslistings_list)
 	prof_list = sorted(prof_list)
 
-	print(format("Course Id:", str(class_row[0])))
+	result = wrap("Course Id: %s", class_row[0])
 	# result += "\n"
 
 	# result += wrap(format("Days:", class_row[1]))
@@ -57,4 +57,4 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 
 	# for prof in prof_list:
 	# 	result += wrap(format("Professor:", prof))
-	# print(result)
+	print(result)
