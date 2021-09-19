@@ -38,8 +38,9 @@ def print_table(class_row, course_row, crosslistings_list, prof_list):
 	result += "\n\n"
 
 	for crosslisting_row in crosslistings_list:
-		result += wrap("Dept and Number: %s %s\n" 
+		result += wrap("Dept and Number: %s %s" 
 			%(crosslisting_row[0], crosslisting_row[1]))
+		result += "\n"
 
 	result += "\n\n"
 
