@@ -6,7 +6,7 @@
 #-----------------------------------------------------------------------
 
 from sqlite3 import connect
-from sys import stderr, exit
+from sys import stderr, exit, argv
 from contextlib import closing
 from reg_arg_parser import parse_args
 from reg_wildcard import wildcard
@@ -51,7 +51,7 @@ def main():
             print_table (row_list)
 
     except Exception as ex:
-        print(ex, file=stderr)
+        print(argv[0] + ": " + str(ex), file=stderr)
         exit(1)
 
 

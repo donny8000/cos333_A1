@@ -84,7 +84,7 @@ def main():
                 exit(0)
 
     except Exception as ex:
-        print(argv[0] + ": " + ex, file=stderr)
+        print(argv[0] + ": " + str(ex), file=stderr)
         exit(1)
 
 
