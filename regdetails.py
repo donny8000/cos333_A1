@@ -35,8 +35,7 @@ def main():
 
                 if class_row is None:
                     raise ValueError(
-                        '%s: no class with classid %d exists' % (
-                            argv[0], id_goal))
+                        'no class with classid %d exists' % id_goal)
 
                 course_id_goal = class_row[0]
 
@@ -85,7 +84,7 @@ def main():
                 exit(0)
 
     except Exception as ex:
-        print(ex, file=stderr)
+        print(argv[0] + ": " + ex, file=stderr)
         exit(1)
 
 
