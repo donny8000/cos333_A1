@@ -15,7 +15,16 @@ looking at where our code differed from the desired output
 and working to make it consistent.
 
 Annette Lee's Contribution:
-
+I helped out with a lot of the conceptual work on the
+assignment, from working through parsing the arguments to how
+we eventually printed things like results. I also helped a lot
+with debugging--if there was some weird error/anomaly that 
+couldn't be attributed to a simple typo, I would quickly 
+scramble to find out a solution, or in some cases, an 
+alternative way to achieve the result we desired. I was also
+very good at finding simpler errors, like typos. For almost
+all of the code that was created, I was by Donovan's side
+helping out with the coding process.
 
 Help from Other People: None
 
