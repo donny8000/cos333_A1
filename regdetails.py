@@ -5,11 +5,11 @@
 # Authors: Donovan Pearce and Annette Lee
 #-----------------------------------------------------------------------
 
-from regdetails_arg_parser import parse_args
-from regdetails_output import print_table
 from sqlite3 import connect
 from sys import stderr, exit, argv
 from contextlib import closing
+from regdetails_arg_parser import parse_args
+from regdetails_output import print_output
 
 #-----------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ def main():
                 cursor.execute(stmt_str, [course_id_goal])
 
                 crosslistings_list = []
-                row = cursor.fetchone() 
+                row = cursor.fetchone()
                 while row is not None:
                     crosslistings_list.append(row)
                     row = cursor.fetchone()
@@ -80,7 +80,7 @@ def main():
                     row = cursor.fetchone()
                     prof_list.append(row[0])
 
-                print_table(class_row, course_row,
+                print_output(class_row, course_row,
                     crosslistings_list, prof_list)
                 exit(0)
 
@@ -89,7 +89,7 @@ def main():
         exit(1)
 
 
-#-----------------------------------------------------------------------	
+#-----------------------------------------------------------------------
 
 if __name__ == '__main__':
     main()
