@@ -30,7 +30,7 @@ def main():
 
                 stmt_str = "SELECT classid, dept, coursenum, "
                 stmt_str += "area, title "
-                stmt_str += "FROM classes, courses, crosslistings "
+                stmt_str += "FROM courses, classes, crosslistings "
                 stmt_str += "WHERE classes.courseid = courses"
                 stmt_str += ".courseid AND classes.courseid = "
                 stmt_str += "crosslistings.courseid "
